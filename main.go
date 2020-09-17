@@ -14,13 +14,18 @@ func main () {
 	/* fmt.Println("Hello, playground") */
     /* var router *gin.Engine равно router := value */
 
-
+    
+    /* Create new Router */
     r := router.New()
 
     
+    /* Registering routes */
     r.GET("/", indexHandler)
+    r.GET("/search/:category", collectHandler)
+    r.GET("/result/:category", resultHandler)
     
-    // запускать router
+
+    // Run Router (запускать router)
     r.Run()
 }
 
