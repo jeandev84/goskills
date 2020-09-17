@@ -1,8 +1,7 @@
-// package block
 package main 
 
 
-// import block
+
 import (
 	"fmt"
 	"goskills/router"
@@ -10,7 +9,6 @@ import (
 
 
 
-// main function
 func main () {
 
 	/* fmt.Println("Hello, playground") */
@@ -20,12 +18,18 @@ func main () {
     r := router.New()
 
     
+    r.GET("/", indexHandler)
+    
     // запускать router
     r.Run()
 }
 
 
 /*
+// package block
+// main function
+// import block
+
 Lunch code
 
 /var/www/goskills/hillel$ go build
